@@ -1,0 +1,33 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ---- IDE / OS ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ---- 模型权重（体积过大，改为 GitHub Releases 下载 / 单独获取）----
+*.pth
+*.pt
+
+# ---- 编译产物：DCNv3 扩展（请用 ops_dcnv3/make.sh 本地编译）----
+ops_dcnv3/build/
+*.obj
+*.so
+*.pyd
+
+# ---- 数据集（外部托管；患者数据不纳入版本库）----
+Data/
+
+# ---- 实验输出 / 日志 ----
+Test_results/
+AAA/
+*.log
+events.out.tfevents.*
+
+# ---- 待上传的打包文件（模型/数据，传到 Releases / Zenodo 后可删）----
+upload_staging/
