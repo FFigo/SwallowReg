@@ -81,7 +81,15 @@ The training script looks for `./SAMWeights/sam_vit_b_01ec64.pth` by default (ov
 
 ## 3. Dataset
 
-The tongue cine-MRI dataset (coronal + sagittal) is hosted on Zenodo:
+> **Note.** Due to patient privacy, the full tongue cine-MRI dataset cannot be released
+> publicly. The data hosted on Zenodo is a **representative sample subset** (50 cases per
+> view, split 30/10/10 into train/test/val) provided for demonstration and to verify that
+> the code runs end to end. It is **not** the complete dataset used in the paper, so results
+> obtained on this subset are not expected to match the numbers reported in the paper. The
+> full dataset may be available from the corresponding author upon reasonable request,
+> subject to ethical approval.
+
+The sample dataset (coronal + sagittal) is hosted on Zenodo:
 
 - **DOI:** https://doi.org/10.5281/zenodo.20724549
 
@@ -89,8 +97,8 @@ Download and unzip it into `Data/` so that the structure is:
 
 ```
 Data/
-├── Guan/Guan_data_npz/{train,val,test}/*.npz   # coronal view
-└── Shi/Shi_data_npz/{train,val,test}/*.npz     # sagittal view
+├── Guan/Guan_data_npz/{train,val,test}/*.npz   # coronal view  (50 cases)
+└── Shi/Shi_data_npz/{train,val,test}/*.npz     # sagittal view (50 cases)
 ```
 
 Each `.npz` holds a moving/fixed image pair and their segmentation masks.
